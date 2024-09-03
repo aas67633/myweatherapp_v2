@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #444;
+        }
+        .weather-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        .forecast {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .forecast-day {
+            background-color: #e0e0e0;
+            padding: 10px;
+            border-radius: 5px;
+            width: 100px;
+        }
+        .forecast-day p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Weather App</h1>
+    <form method="get">
+        <input type="text" name="city" placeholder="Enter city name" required>
+        <button type="submit">Get Weather</button>
+    </form>
+
+    {% if weather %}
+    <div class="weather-container">
+        <h2>Current Weather in {{ city }}</h2>
+        <p>Temperature: {{ weather['temp'] }} °F</p>
+        <p>Weather: {{ weather['description'] }}</p>
+        <p>Humidity: {{ weather['humidity'] }}%</p>
+
+        <h3>5-Day Forecast</h3>
+        <div class="forecast">
+            {% for day in forecast %}
+            <div class="forecast-day">
+                <p>{{ day['date'] }}</p>
+                <p>{{ day['temp'] }} °F</p>
+                <p>{{ day['description'] }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+</body>
+</html>
+
