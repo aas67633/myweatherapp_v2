@@ -34,4 +34,4 @@ This is a 5-day forecast weather app created with Flask that allows users to ent
    pip install -r requirements.txt
 
 6. **Run the Flask App**
-   Use python app.py and run the app through http://127.0.0.1:5001/
+   Use python app.py and run the app through http://127.0.0.1:5001/ to see the weather app in action!
