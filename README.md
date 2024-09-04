@@ -18,4 +18,20 @@ This is a 5-day forecast weather app created with Flask that allows users to ent
    ```bash
    git clone https://github.com/aas67633/myweatherapp.git
 
-2. Go to http://127.0.0.1:5001
+2. **Navigate to the Project Directory**
+   After cloning the repository, navigate into the project directory by using the command:
+   cd myweatherapp
+
+3. **Create a Virtual Environment**
+   python -m venv venv
+
+4. **Activate the Virtual Environment**
+   Windows: venv\Scripts\activate
+   macOS/Linux: source venv/bin/activate
+
+5. **Install the Required Dependencies**
+   Install all the necessary Python packages from the requirements.txt file using:
+   pip install -r requirements.txt
+
+6. **Run the Flask App**
+   Use python app.py and run the app through http://127.0.0.1:5001/
