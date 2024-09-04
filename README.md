@@ -16,7 +16,7 @@ This is a 5-day forecast weather app created with Flask that allows users to ent
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/aas67633/myweatherapp.git
+   git clone https://github.com/aas67633/myweatherapp_v2.git
 
 2. **Navigate to the Project Directory**
    After cloning the repository, navigate into the project directory by using the command:
